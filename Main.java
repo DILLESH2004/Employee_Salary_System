@@ -9,7 +9,7 @@ abstract class Employee{
    public Employee(String name,int id){
         this.name = name;
         this.id = id;
-   }
+    }
    public String getName(){
     return name;
    }
@@ -56,7 +56,7 @@ class PartTimeEmployee extends Employee{
     }
 }
 
-class SalarySystem{
+class SalarySystem {
     private ArrayList<Employee> employeelist;
 
     public SalarySystem(){
@@ -82,6 +82,14 @@ class SalarySystem{
             System.out.println(i);
         }
     }
+
+    public void searchEmployee(int id){
+        for(Employee i:employeelist){
+            if(i.getId()==id){
+                System.out.println(i);
+            }
+        }
+    }
 }
 
 
@@ -102,6 +110,7 @@ public class Main{
         salarySystem.removeEmployee(r);
         System.out.println("Remaining Employee Details:");
         salarySystem.displayEmployees();
+        salarySystem.searchEmployee(2);
         sc.close();
     }
 }
