@@ -163,6 +163,8 @@ public class Main{
                     break;
                 case 5:
                     flag = false;
+                    System.out.println("Exiting The Loop ......");
+                    break;
                 default:
                     System.out.println("Invalid choice. Please choose a valid option.");
             }
